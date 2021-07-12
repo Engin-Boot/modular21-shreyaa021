@@ -1,20 +1,21 @@
-using System;
-using System.Diagnostics;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Text;
 
-namespace TelCo.ColorCoder
+namespace ConsoleApp1
 {
-        class ColorPair
+    class ColorPair
+    {
+        public Color majorColor;
+        public Color minorColor;
+        public override string ToString()
         {
-            public Color majorColor;
-            public Color minorColor;
-            public override string ToString()
-            {
-                return string.Format("MajorColor:{0}, MinorColor:{1}", majorColor.Name, minorColor.Name);
-            }
-			 public static int GetPairNumberFromColor(ColorPair pair)
+            return string.Format("MajorColor:{0}, MinorColor:{1}", majorColor.Name, minorColor.Name);
+        }
+        public static int GetPairNumberFromColor(ColorPair pair)
         {
-		// Find the major color in the array and get the index
+            // Find the major color in the array and get the index
             int majorIndex = -1;
             for (int i = 0; i < Program.colorMapMajor.Length; i++)
             {
@@ -35,12 +36,12 @@ namespace TelCo.ColorCoder
                     break;
                 }
             }
-              if (majorIndex == -1 || minorIndex == -1)
+            if (majorIndex == -1 || minorIndex == -1)
             {
                 throw new ArgumentException(
                     string.Format("Unknown Colors: {0}", pair.ToString()));
             }
             return (majorIndex * Program.colorMapMinor.Length) + (minorIndex + 1);
         }
-        }
-       }
+    }
+}
