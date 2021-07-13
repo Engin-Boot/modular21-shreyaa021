@@ -12,7 +12,7 @@ namespace ConsoleApp1
         public static void manual()
         {
 
-            int pno = 1;
+            pno = 1;
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 5; j++)
