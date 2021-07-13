@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Text;
 
-namespace ConsoleApp1
+namespace TelCo.ColorCoder
 {
     class colorManual
     {
@@ -18,7 +18,7 @@ namespace ConsoleApp1
                 for (int j = 0; j < 5; j++)
                 {
 
-                    Console.WriteLine("[In]Pair Number: {0},Colors: major{1} - minor{2}\n", pno, Program.colorMapMajor[i], Program.colorMapMinor[j]);
+                    Console.WriteLine("[In]Pair Number: {0},Colors: major{1} - minor{2}\n", pno, colorFromPairnum.colorMapMajor[i], colorFromPairnum.colorMapMinor[j]);
                     pno++;
                 }
             }
