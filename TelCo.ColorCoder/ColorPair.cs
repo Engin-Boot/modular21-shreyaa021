@@ -17,25 +17,25 @@ namespace TelCo.ColorCoder
         {
             // Find the major color in the array and get the index
             int majorIndex = -1;
+            
+            int minorIndex = -1;
             for (int i = 0; i < colorFromPairnum.colorMapMajor.Length; i++)
             {
                 if (colorFromPairnum.colorMapMajor[i] == pair.majorColor)
                 {
                     majorIndex = i;
-                    break;
+                    
+                }
+                  if (colorFromPairnum.colorMapMinor[i] == pair.minorColor)
+                {
+                    minorIndex = i;
+                   
                 }
             }
 
             // Find the minor color in the array and get the index
-            int minorIndex = -1;
-            for (int i = 0; i < colorFromPairnum.colorMapMinor.Length; i++)
-            {
-                if (colorFromPairnum.colorMapMinor[i] == pair.minorColor)
-                {
-                    minorIndex = i;
-                    break;
-                }
-            }
+            
+           
             if (majorIndex == -1 || minorIndex == -1)
             {
                 throw new ArgumentException(
