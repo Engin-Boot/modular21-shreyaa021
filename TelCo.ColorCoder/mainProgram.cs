@@ -10,9 +10,10 @@ namespace TelCo.ColorCoder
     {
         private static void Main(string[] args)
         {
+            referenceManual manual = new referenceManual(new printManual());
 
+            referenceManual testmanual = new referenceManual(new testmanual());
 
-            colorManual.manual();
             int pairNumber = 4;
             ColorPair testPair1 = colorFromPairnum.GetColorFromPairNumber(pairNumber);
            
